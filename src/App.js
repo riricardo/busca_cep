@@ -1,8 +1,27 @@
-import React from 'react';
-import {ScrollView, View, Text} from 'react-native';
+import React, {Component} from 'react';
+import {ScrollView} from 'react-native';
+import ListaCep from './component/ListaCep';
 
-const App = () => {
-  return ();
-};
+export default class App extends Component {
+  constructor(props) {
+    super(props);
+    console.log('constructor');
+  }
 
-export default App;
+  UNSAFE_componentWillMount() {
+    console.log('componentWillMount');
+  }
+
+  componentDidMount() {
+    console.log('componentDidMount');
+  }
+
+  render() {
+    console.log('render');
+    return (
+      <ScrollView>
+        <ListaCep />
+      </ScrollView>
+    );
+  }
+}
